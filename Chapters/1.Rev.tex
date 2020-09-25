@@ -1,0 +1,537 @@
+\chapter{Contexto de organización y problema}
+
+\noindent Para establecer el contexto de la organización y los problemas a resolverse este capítulo está dividido en tres secciones: la primera donde se aborda tanto el contexto de la  Edición  XXII  (2019-2020) del Estudio Anual de AMAI, una segunda en donde se plantean a los objetivos de negocios a ser alcanzados por el presente trabajo y la descripción de las fuentes de datos correspondientes.
+
+\section{Descripción de la organización }
+
+\subsection{Asociación Mexicana de Agencias de Inteligencia de Mercado y Opinión A.C. (AMAI)}
+La Asociación Mexicana de Agencias de Inteligencia de Mercado y Opinión A.C. (AMAI)\footnote{Véase \url{https://www.amai.org/index.php}}, es una asociación profesional enfocada al sector de inteligencia aplicada a negocios y asuntos sociales, que engloba a los principales actores de la industria que ofrecen, en México, servicios de generación y transformación de datos para la toma de decisiones\footnote{A la fecha de elaboración de éste trabajo, AMAI cuenta entre sus miembros a más de 60 empresas del sector que representa.}.
+
+Dicha asociación está dedicada a propiciar y promover la profesionalización de la industria que representa, mejorar su calidad y fomentar que se reconozca su compromiso con el desarrollo de México. Además persigue consolidarse como el organismo de referencia de la cadena productiva dinámica y creciente a través de los siguientes objetivos estratégicos: 1) impulsar la creación de lineamientos de buenas prácticas, códigos de actuación profesional y otras formas de auto-regulación y ética de negocios, 2) proteger el derecho de privacidad de los informantes y la confidencialidad de la información para la toma de decisiones, 3) promover el mejor uso de la inteligencia comercial y la administración del conocimiento para los negocios y asuntos públicos en México y 4) fomentar la profesionalización de la cadena productiva mediante la creación del Instituto AMAI, como entidad de capacitación y certificación\footnote{Véase \url{https://www.amai.org/quienes_somos/quienes.php}}.
+
+\subsection{Centro de Ciencia de Datos del ITAM (CCD)}
+
+El Centro de Ciencia de Datos del ITAM (CCD) un centro de desarrollo de proyectos e investigación cuya misión consiste en ayudar a gobiernos, organizaciones no gubernamentales (ONG) y empresas a desarrollar proyectos de ciencia de datos de forma correcta, teniendo incidencia positiva en las políticas, estrategias o programas que impactan a los ciudadanos y usuarios a través de nuestras soluciones. Hasta agosto de 2020 fue dirigido por Dr. Adolfo de Unanúe Tiscareño, y actualmente se encuentra bajo la dirección de Msc. Liliana Millán Nuñez.
+
+Cabe destacar que el CCD reclutó como asistentes de investigación a un conjunto de alumnos de la Maestría en Ciencia de Datos, de donde se originó el vínculo entre el proyecto de la Edición XXII (2019-2020) del Estudio Anual de la Industria de Investigación de Mercados y Opinión Pública en México y el autor del presente caso de titulación, al asumir el rol de asistente de investigación en el CCD durante la primera mitad de 2020.
+
+\section{Descripción del problema a resolver}
+
+\subsection{Contexto de la Edición XXII (2019-2020) del Estudio Anual de AMAI}
+
+Cómo se ha mencionado previamente, AMAI realiza cada año el \emph{Estudio Anual de la Industria de Investigación de Mercados y Opinión Pública en México}, con el propósito de analizar la situación que prevalece en el mercado mexicano de investigación e inteligencia aplicada a mercados, medios y opinión pública.
+
+Para llevar a cabo la Edición XXII (2019-2020) de dicho estudio, siguiendo el mismo procedimiento de años anteriores, AMAI envío a decenas de organizaciones del sector\footnote{Mayoritariamente empresas asociadas a la AMAI, pero también a otras.}, la convocatoria a participar en el estudio mediante la respuesta en línea a un cuestionario anónimo y predeterminado, para asegurar la confidencialidad de la información generada. Para mayor detalle, dicho cuestionario se presenta a través del apéndice \ref{censo2019} del presente documento.
+
+Cabe destacar que para dicho estudio, el cuestionario correspondiente fue integrado por un total de 18 preguntas, dividas conforme a temas cuyo contenido se puede resumir como sigue: 
+\begin{itemize}
+    \item[i)] \textbf{Confidencialidad de los datos:} datos generales de la empresa y persona física que dio respuesta al cuestionario, así como decisión del consentimiento para ser incluido en un \textit{ranking} de empresas según su nivel de facturación en 2019. 
+    \item[ii)] \textbf{Tipos de investigación realizada:} asociadas a la cantidad de proyectos de investigación realizados en el periodo en cuestión según su tipo; es decir, si fueron cualitativos, cuantitativos, de recolección y analítica de datos, aplicaciones de biometría o neurociencia, servicios de consultoría, asesoría o capacitación u otros.
+    \item[iii)] \textbf{Facturación en 2019:} relativas al nivel de facturación de las empresas en 2019 y su desagregación en los diferentes tipos de proyectos aludidos en el inciso previo. También se aborda la desagregación de dicha facturación según el tipo de destinatario (es decir, si el peticionario de los servicios fue de México o de algún país extranjero), el sector al que fue dirigido (público, privado, organizaciones no gubernamentales u otros similares) y finalmente el tipo de industria involucrada (en concreto, si se trató de empresas del ramo de productos de consumo perecederos o no perecederos, comercio y menudeo, servicios financieros, automotriz, farmacéutica, telecomunicaciones y tecnología de comunicación, medios de comunicación y entretenimiento, agencias de publicidad u otros).
+    \item[iv)] \textbf{Volumen de investigación:} asociados al volumen (en número) de proyectos y de estudios cualitativos y cuantitativos realizados en 2019. En concreto, para los estudios cualitativos, se investiga la cantidad de unidades realizadas para sesiones de grupo presenciales o remotas, entrevistas a profundidad y etnografías o aplicaciones de antropología mientras que en contraste para los cuantitativos se busca conocer las unidades según su tipo (es decir, si fueron cara a cara en domicilios, telefónicas, en vía pública o punto de afluencia, a la salida de casillas electorales, por Internet u otros medios).
+    \item[v)] \textbf{Recursos humanos y técnicos:} relativas a la composición en número de personas que trabajaron en 2019 para las empresas participantes\footnote{Tanto en esquemas permanentes (por nómina) como eventuales (por proyecto)}, a través de las diferentes áreas que componen al negocio (es decir, socios y altos ejecutivos, personal técnico y de atención a clientes, de apoyo administrativo y equipo de producción), considerando en particular el desglose por género,
+    \item[vi)] \textbf{Expectativas y prospectiva sobre la industria:} abordan las perspectivas de la industria sobre cambios más importantes y principales retos a 5 años, así como los pronósticos de los participantes al corto plazo para la economía personal, la de la empresa, la industria en México y en el mundo, así como de la situación del país en general. 
+\end{itemize}
+
+Cabe destacar que, aunque las preguntas de este cuestionario versan sobre diferentes aspectos que son transversales a esta industria, sólo una parte de tales interrogantes es de respuesta obligatoria. 
+
+Por otro lado, aunque históricamente AMAI procesaba internamente el volumen de información obtenido en tal proceso, en el último año, la persona encargada de realizar el estudio se jubiló, por lo que AMAI decidió encargar al CCD del ITAM el procesamiento y análisis de la información recopilada, con el propósito de consolidar documentos que faciliten su entendimiento y ayuden a encontrar elementos de valor para la industria, brindando entre sus participantes el beneficio de contar con una institución académica que realice el análisis como alguien imparcial y externo.
+
+\subsection{Objetivos a alcanzar} \label{obj:bussiness}
+
+Por lo que hace a la Edición XXII (2019-2020) del \emph{Estudio Anual de la Industria de Investigación de Mercados y Opinión Pública en México}, AMAI estableció con el CCD del ITAM, a través de un acuerdo de confidencialidad, que el procesamiento de la información debía derivar en un documento segmentado para su uso público (dirigido a medios de comunicación e interesados) y otro de uso privado (dirigido únicamente a participantes del estudio).
+
+En tal sentido, AMAI y el CCD ITAM establecieron los objetivos de negocio a alcanzarse a partir de la Edición  XXII  (2019-2020) del Estudio Anual de AMAI, los cuales son puntos relevantes para analizar la situación que prevalece en el mercado mexicano de investigación e inteligencia aplicada a mercados, medios y opinión pública, que a continuación se presentan de manera agrupada en torno a diferentes ejes temáticos:
+
+\begin{enumerate}
+    \item \textbf{Generales:}
+        \begin{enumerate}
+        \item Cantidad de empresas participantes
+        \item Número de empresas participantes comparables (Empresas coincidentes en 2018-2019); es decir, aquellas que simultáneamente formaron parte de las Ediciones XXI (2018-2019)\footnote{Véase \url{https://www.amai.org/descargas/Estudio_Anual_AMAI_XXI_Edicion_2018_Comunicado_Abril_2019.pdf}} y XXII (2019-2020) del Estudio Anual de AMAI.
+        \end{enumerate}
+    
+    \item \textbf{Tamaño del mercado:}
+        \begin{enumerate}
+        \item Dimensionamiento del mercado con base en la facturación de las empresas que conforman el sector de inteligencia de mercado y opinión en México.
+        \end{enumerate}
+        
+    \item \textbf{Cambios para empresas coincidentes en 2018-2019 sobre:}
+        \begin{enumerate}
+        \item Número de empresas que reportaron datos para Ediciones XXI (2018-2019) y XXII (2019-2020) del Estudio Anual de AMAI,
+        \item Niveles de facturación para 2018 y 2018,
+        \end{enumerate}
+        
+    \item \textbf{Valor del tamaño del mercado en el tiempo:}
+        \begin{enumerate}
+        \item Valor del mercado de toda la industria en términos reales y nominales,
+        \item Cambios del mercado de toda la industria y de empresas coincidentes en 2018-2019,
+        \item Valores del mercado de toda la industria en dólares americanos,
+        \end{enumerate}
+    
+    \item \textbf{Volumen de producción:}
+        \begin{enumerate}
+        \item Cantidad total de proyectos realizados en el periodo de interés,
+        \item Cantidad total de unidades relativas a sesiones de grupo presenciales o remotas, entrevistas a profundidad y etnografías o aplicaciones de antropología,
+        \item Cantidad total de entrevistas realizadas según su tipo; es decir, si se realizaron cara a cara en domicilios, en vía pública, de manera telefónica, a la salida de casilla, por Internet u otro medio.
+        \end{enumerate}
+    
+    \item \textbf{Capital humano:}
+        \begin{enumerate}
+        \item Cantidad de recursos humanos reportados por los participantes del estudio en los diversos segmentos que integran una empresa del sector, esto es, socios y altos ejecutivos, personal técnico y de atención a clientes, de apoyo administrativo y equipo de producción,
+        \item Distribución del capital humano en los segmentos que integran una empresa sector, descritos en el punto anterior, incluyendo el desglose por género,
+        \end{enumerate}
+        
+    \item \textbf{Ranking de empresas:}
+        \begin{enumerate}
+        \item Ranking de empresas participantes según su nivel de facturación en 2019, considerando aquellas que otorgaron su consentimiento explícito de formar parte de éste.
+        \end{enumerate}
+    
+    \item \textbf{Ante la incertidumbre futura:}
+        \begin{enumerate}
+        \item Identificar temas relevantes sobre retos y cambios más importantes que la industria identifica en un horizonte de 5 años a futuro,
+        \end{enumerate}
+
+    \item \textbf{Perspectivas 2020}
+        \begin{enumerate}
+        \item Identificar perspectivas sobre diferentes temas: I) Mi empresa, II) México en general, III) Industria en el mundo, IV) Industria en México y V) Economía personal.
+        \end{enumerate}
+
+\end{enumerate}
+
+\subsection{¿Qué se está haciendo actualmente?}
+
+Cómo se ha mencionado previamente, AMAI procesaba internamente el volumen de información obtenido en las ediciones de su estudio; ello se realizaba a través de hojas de cálculo (MS Excel) asociando manualmente la información histórica, de manera que a través de fórmulas o tablas dinámicas se realizaran los cálculos de interés.
+
+En este sentido, en el caso de respuestas relativas a análisis de texto tales se basaban en conocimiento cuantitativo de ésta industria de parte del analista encargado, para extraer temas de interés reflejados en las respuestas de los participantes.
+
+De esta tal forma, los resultados del estudio se extraían manualmente y uno a uno de éstas hojas de cálculo, para reflejarse posteriormente en los reportes ejecutivos derivados de las diferentes ediciones del estudio.
+
+Cabe destacar que el procesamiento de la información y la generación de dichos reportes se realizaba por una sola persona, que en fechas recientes se jubiló, por lo que la replicabilidad de la metodología empleada hasta entonces no se encontraba asegurada, dado que las decisiones de ésta no fueron documentadas fuera de las hojas de cálculo.
+
+Es así que AMAI consideró pertinente encargar al CCD del ITAM el procesamiento y análisis de la información recopilada, ello en la inteligencia de que éste hecho brinda a sus participantes el beneficio de contar con una institución académica que realice el análisis como alguien imparcial y externo.
+
+De tal manera, el CCD del ITAM se dio a la tarea de consolidar documentos de análisis que faciliten el entendimiento de la información recibida y ayuden a encontrar elementos de valor para la industria.
+
+\section{Descripción de las fuentes de datos} \label{data:sources}
+
+Para la realización de este proyecto AMAI proveyó al CCD ITAM las siguientes fuentes de información:
+
+\begin{itemize}
+    \item Bases de datos de las respuestas de la industria a los Estudios Anuales de AMAI, desde 2007 a 2019, sin procesamiento, en formato \textit{comma separated value} (formato .csv).
+    \item Cálculos y resultados de los Estudios Anuales de AMAI, desde 2007 a 2018, en formato de hojas de cálculo (MS Excel).
+    \item Reportes ejecutivos de los resultados de los Estudios Anuales de AMAI, desde 2007 a 2018 (formato .pdf, MS Power Point y MS Word).
+\end{itemize}
+
+Puesto que la estructura de preguntas del Estudio Anual de AMAI se mantuvo intacta para ediciones recientes, para simplificar la descripción de los datos, la exposición siguiente se enfocará sobre la base de datos que reúne las respuestas al cuestionario de la Edición XXII (2019-2020) del Estudio Anual de la Industria de Investigación de Mercados y Opinión Pública en México, misma que abarca 88 columnas y 71 registros. Cada registro, equivale a las respuestas de una empresa al cuestionario correspondiente.
+
+En tal sentido, para facilitar la exposición de los campos de la base de datos que reúne la estructura de las respuestas a la Edición XXII (2019-2020) del Estudio Anual de AMAI, se ha resumido la información correspondiente a través de los siguientes cuadros, donde cabe destacar que las respuestas corresponde valores numéricos, porcentajes o texto libre.
+
+% id_cuestionario - p4_2
+
+\begin{table}[]
+\caption{Estructura de las respuestas a la Edición XXII (2019-2020) del Estudio Anual de AMAI (parte 1)}
+\label{tab:raw2019_1}
+\begin{tabular}{|l|l|l|}
+\hline
+Columna          & Tipo  & Descripción                                                                                    \\ \hline
+id\_cuestionario & Entero   & Identificador numérico del participante                                                        \\ \hline
+username         & Texto & \parbox[t]{8cm}{Nombre de usuario en sistema que se asocia a empresa participante}                              \\ \hline
+fechainicio      & Fecha & \parbox[t]{8cm}{Fecha en la que el usuario de la empresa comenzó a contestar el cuestionario}                   \\ \hline
+horainicio       & Hora  & \parbox[t]{8cm}{Hora en la que el usuario de la empresa comenzó a contestar el cuestionario}                    \\ \hline
+fechafin         & Fecha & \parbox[t]{8cm}{Fecha en la que el usuario de la empresa concluyó el cuestionario}                              \\ \hline
+horafin          & Hora  & \parbox[t]{8cm}{Hora en la que el usuario de la empresa concluyó el cuestionario}                               \\ \hline
+terminado        & Booleana  & \parbox[t]{8cm}{Flag que indica si la empresa culminó el cuestionario}                                          \\ \hline
+p1 &
+  Entero &
+  \parbox[t]{8cm}{Flag que indica si la empresa autorizó estar en el rankeo público de compañías de investigación, ubicando su lugar a partir del dato de facturación proporcionado, pero sin revelarlo públicamente (1=Sí, 2=No)} \\ \hline
+p2               & Texto & Nombre oficial de la empresa                                                                   \\ \hline
+p3               & Texto & \parbox[t]{8cm}{Nombre oficial de informante (es decir, persona física que dio respuesta al cuestionario)}              \\ \hline
+p4\_1            & Texto & \parbox[t]{8cm}{Clave que indica si la empresa realizó proyectos cualitativos en 2019 (a=Sí,  campo vacío=No)}  \\ \hline
+p4\_2            & Texto & \parbox[t]{8cm}{Clave que indica si la empresa realizó proyectos cuantitativos en 2019 (b=Sí,  campo vacío=No)} \\ \hline
+\end{tabular}
+\end{table}
+
+
+% p4_3 - p5
+
+\begin{table}[]
+\caption{Estructura de las respuestas a la Edición XXII (2019-2020) del Estudio Anual de AMAI (parte 2)}
+\label{tab:raw2019_2}
+\begin{tabular}{|l|l|l|}
+\hline
+Columna &
+  Tipo &
+  Descripción \\ \hline
+p4\_3 &
+  Texto &
+  \parbox[t]{9cm}{Clave que indica si la empresa realizó proyectos  de recolección y analítica de datos, tanto primarios como secundarios (Incluye auditorías de ventas y análisis de compraventas realizadas por bases de datos de clientes de una compañía; análisis de big data y otros relacionados, modelación de conductas y procesos de compra para productos de un cliente, etcétera en 2019 (c=Sí,  campo vacío=No)} \\ \hline
+p4\_4 &
+  Texto &
+  \parbox[t]{9cm}{Clave que indica si la empresa realizó proyectos de biometría o neurociencia para determinar respuestas a estímulos diversos o para apoyar la realización de proyectos encaminados a entender o generar una determinada decisión humana en 2019 (d=Sí,  campo vacío=No)} \\ \hline
+p4\_5 &
+  Texto &
+  \parbox[t]{9cm}{Clave que indica si la empresa realizó proyectos servicios de consultoría, asesoría o capacitación que se hayan facturado independientemente de proyectos de investigación de mercados y opinión pública en 2019 (e=Sí,  campo vacío=No)} \\ \hline
+p5 &
+  Numérica &
+  \parbox[t]{9cm}{Total de facturación de la empresa en 2019 (Descontando facturación cruzada entre filiales y subcontratación a otras empresas de investigacion que no son maquiladores. En caso de corporativos, se consolida la facturacion de todas las unidades de negocio), reportado en pesos mexicanos} \\ \hline
+\end{tabular}
+\end{table}
+
+% p6_1 - p6_6
+
+\begin{table}[]
+\caption{Estructura de las respuestas a la Edición XXII (2019-2020) del Estudio Anual de AMAI (parte 3)}
+\label{tab:raw2019_3}
+\begin{tabular}{|l|l|l|}
+\hline
+Columna & Tipo    & Descripción                                                                                                                \\ \hline
+p6\_1   & Numérica & \parbox[t]{8cm}{Porcentaje aproximado de la facturación total que corresponde a proyectos cualitativos realizados por la empresa en 2019}  \\ \hline
+p6\_2   & Numérica & \parbox[t]{8cm}{Porcentaje aproximado de la facturación total que corresponde a proyectos cuantitativos realizados por la empresa en 2019} \\ \hline
+p6\_3 & Numérica & \parbox[t]{8cm}{Porcentaje aproximado de la facturación total que corresponde a proyectos de recolección y analítica de datos realizados por la empresa en 2019}        \\ \hline
+p6\_4 & Numérica & \parbox[t]{8cm}{Porcentaje aproximado de la facturación total que corresponde a proyectos de aplicaciones de biometría o neurociencia realizados por la empresa en 2019} \\ \hline
+p6\_5 & Numérica & \parbox[t]{8cm}{Porcentaje aproximado de la facturación total que corresponde a proyectos de consultoría, asesoría o capacitación realizados por la empresa en 2019}     \\ \hline
+p6\_6   & Numérica & \parbox[t]{8cm}{Porcentaje aproximado de la facturación total que corresponde a otro tipo de proyectos realizados por la empresa en 2019}  \\ \hline
+\end{tabular}
+\end{table}
+
+% p7_1_a - p7_3_a
+
+\begin{table}[]
+\caption{Estructura de las respuestas a la Edición XXII (2019-2020) del Estudio Anual de AMAI (parte 4)}
+\label{tab:raw2019_4}
+\begin{tabular}{|l|l|l|}
+\hline
+Columna &
+  Tipo &
+  Descripción \\ \hline
+p7\_1\_a &
+  Numérica &
+  \parbox[t]{9cm}{Porcentaje aproximado de la facturación total que corresponde a proyectos realizados por la empresa en 2019, para clientes o peticionarios establecidos en México} \\ \hline
+p7\_1\_b &
+  Numérica &
+  \parbox[t]{9cm}{Porcentaje aproximado de la facturación total que corresponde a proyectos realizados por la empresa en 2019, para clientes o peticionarios de países extranjeros} \\ \hline
+p7\_2\_a &
+  Numérica &
+  \parbox[t]{9cm}{Porcentaje aproximado de la facturación total que corresponde a proyectos realizados por la empresa en 2019, para el sector público/gobierno de México u otro país} \\ \hline
+p7\_2\_b &
+  Numérica &
+  \parbox[t]{9cm}{Porcentaje aproximado de la facturación total que corresponde a proyectos realizados por la empresa en 2019, para el sector privado de México u otro país} \\ \hline
+p7\_2\_c &
+  Numérica &
+  \parbox[t]{9cm}{Porcentaje aproximado de la facturación total que corresponde a proyectos realizados por la empresa en 2019, para organizaciones no gubernamentales (ONG's) o instituciones similares de México u otro país} \\ \hline
+p7\_3\_a &
+  Numérica &
+  \parbox[t]{9cm}{Porcentaje aproximado de la facturación total que corresponde a proyectos realizados por la empresa en 2019, para empresas que elaboran productos de consumo perecederos} \\ \hline
+\end{tabular}
+\end{table}
+
+% p7_3_b - p7_3_h
+
+\begin{table}[]
+\caption{Estructura de las respuestas a la Edición XXII (2019-2020) del Estudio Anual de AMAI (parte 5)}
+\label{tab:raw2019_5}
+\begin{tabular}{|l|l|l|}
+\hline
+Columna &
+  Tipo &
+  Descripción \\ \hline
+p7\_3\_b &
+  Numérica &
+  \parbox[t]{9cm}{Porcentaje aproximado de la facturación total que corresponde a proyectos realizados por la empresa en 2019, para empresas que elaboran productos de consumo no perecederos} \\ \hline
+p7\_3\_c &
+  Numérica &
+  \parbox[t]{9cm}{Porcentaje aproximado de la facturación total que corresponde a proyectos realizados por la empresa en 2019, para empresas dedicadas al comercio y menudeo} \\ \hline
+p7\_3\_d &
+  Numérica &
+  \parbox[t]{9cm}{Porcentaje aproximado de la facturación total que corresponde a proyectos realizados por la empresa en 2019, para empresas dedicas a servicios financieros} \\ \hline
+p7\_3\_e &
+  Numérica &
+  \parbox[t]{9cm}{Porcentaje aproximado de la facturación total que corresponde a proyectos realizados por la empresa en 2019, para empresas del sector automotriz} \\ \hline
+p7\_3\_f &
+  Numérica &
+  \parbox[t]{9cm}{Porcentaje aproximado de la facturación total que corresponde a proyectos realizados por la empresa en 2019, para empresas farmacéuticas} \\ \hline
+p7\_3\_g &
+  Numérica &
+  \parbox[t]{9cm}{Porcentaje aproximado de la facturación total que corresponde a proyectos realizados por la empresa en 2019, para empresas de telecomunicaciones y tecnología de comunicación} \\ \hline
+p7\_3\_h &
+  Numérica &
+  \parbox[t]{9cm}{Porcentaje aproximado de la facturación total que corresponde a proyectos realizados por la empresa en 2019, para medios de comunicación y entretenimiento} \\ \hline
+\end{tabular}
+\end{table}
+
+% p7_3_i - p_8_3
+
+\begin{table}[]
+\caption{Estructura de las respuestas a la Edición XXII (2019-2020) del Estudio Anual de AMAI (parte 6)}
+\label{tab:raw2019_6}
+\begin{tabular}{|l|l|l|}
+\hline
+Columna &
+  Tipo &
+  Descripción \\ \hline
+p7\_3\_i & Numérica & \parbox[t]{9cm}{Porcentaje aproximado de la facturación total que corresponde a proyectos realizados por la empresa en 2019, para agencias de publicidad}  \\ \hline
+p7\_3\_j & Numérica & \parbox[t]{9cm}{Porcentaje aproximado de la facturación total que corresponde a proyectos realizados por la empresa en 2019, para otra clase de empresas} \\ \hline
+p8\_1 &
+  Numérica &
+  \parbox[t]{9cm}{Volumen de investigación cualitativa relativa a sesiones de grupo presenciales o remotas hechas por la empresa en 2019 (excluyendo proyectos hechos para otra empresa de investigacion de mexico, pero si considerando las que se hicieron como maquila para clientes extranjeros)}, \\ \hline
+p8\_2 &
+  Numérica &
+  \parbox[t]{9cm}{Volumen de investigación cualitativa relativa a entrevistas a profundidad hechas por la empresa en 2019 (excluyendo proyectos hechos para otra empresa de investigación de México, pero si considerando las que se hicieron como maquila para clientes extranjeros)}, \\ \hline
+p8\_3 &
+  Numérica &
+  \parbox[t]{9cm}{Volumen de investigación cualitativa relativa a etnografías o aplicaciones de antropología hechas por la empresa en 2019 (excluyendo proyectos hechos para otra empresa de investigación de México, pero si considerando las que se hicieron como maquila para clientes extranjeros)}, \\ \hline
+\end{tabular}
+\end{table}
+
+% p9 - p10_otro
+
+\begin{table}[]
+\caption{Estructura de las respuestas a la Edición XXII (2019-2020) del Estudio Anual de AMAI (parte 7)}
+\label{tab:raw2019_7}
+\begin{tabular}{|l|l|l|}
+\hline
+Columna &
+  Tipo &
+  Descripción \\ \hline
+p9 &
+  Numérica &
+  \parbox[t]{9cm}{Número de proyectos de investigación cualitativa realizados por la empresa en 2019} \\ \hline
+p10\_1 &
+  Numérica &
+  \parbox[t]{9cm}{Volumen de investigación cuantitativa hecha por su empresa en 2019, de acuerdo al número de unidades realizadas para levantamientos de tipo cara a cara en domicilios (viviendas o empresas)} \\ \hline
+p10\_2 &
+  Numérica &
+  \parbox[t]{9cm}{Volumen de investigación cuantitativa hecha por su empresa en 2019, de acuerdo al número de unidades realizadas para levantamientos de tipo telefónico} \\ \hline
+p10\_3 &
+  Numérica &
+  \parbox[t]{9cm}{Volumen de investigación cuantitativa hecha por su empresa en 2019, de acuerdo al número de unidades realizadas para levantamientos cara a cara o en punto de afluencia} \\ \hline
+p10\_4 &
+  Numérica &
+  \parbox[t]{9cm}{Volumen de investigación cuantitativa hecha por su empresa en 2019, de acuerdo al número de unidades realizadas para levantamientos a la salida de casilla electoral} \\ \hline
+p10\_5 &
+  Numérica &
+  \parbox[t]{9cm}{Volumen de investigación cuantitativa hecha por su empresa en 2019, de acuerdo al número de unidades realizadas para levantamientos por internet (con personas o empresas)} \\ \hline
+p10\_otro &
+  Numérica &
+  \parbox[t]{9cm}{Volumen de investigación cuantitativa hecha por su empresa en 2019, de acuerdo al número de unidades realizadas para levantamiento de otros tipos} \\ \hline
+\end{tabular}
+\end{table}
+
+% p11 - p12_2_mujeres
+
+\begin{table}[]
+\caption{Estructura de las respuestas a la Edición XXII (2019-2020) del Estudio Anual de AMAI (parte 8)}
+\label{tab:raw2019_8}
+\begin{tabular}{|l|l|l|}
+\hline
+Columna & Tipo & Descripción \\ \hline
+p11 &
+  Numérica &
+  \parbox[t]{8cm}{Número de proyectos cuantitativos (con entrevista) que realizó empresa realizó en 2019} \\ \hline
+p12\_1 &
+  Numérica &
+  \parbox[t]{8cm}{Número de personas que colaboraron como socios y altos ejecutivos (directores generales y directores de área) en su empresa en 2019 de forma permanente, por nómina} \\ \hline
+p12\_1\_mujeres &
+  Numérica &
+  \parbox[t]{8cm}{Porcentaje de personas mujeres que colaboraron como socios y altos ejecutivos (directores generales y directores de área) en su empresa en 2019 de forma permanente, por nómina} \\ \hline
+p12\_1\_hombres &
+  Numérica &
+  \parbox[t]{8cm}{Porcentaje de personas hombres que colaboraron como socios y altos ejecutivos (directores generales y directores de área)  en su empresa en 2019 de forma permanente, por nómina} \\ \hline
+p12\_2 &
+  Numérica &
+  \parbox[t]{8cm}{Número de personas que colaboraron como personal técnico y de atención a clientes (subdirectores, investigadores, analistas, etc.) en su empresa en 2019 de forma permanente, por nómina} \\ \hline
+p12\_2\_mujeres &
+  Numérica &
+  \parbox[t]{8cm}{Porcentaje de personas mujeres que colaboraron como personal técnico y de atención a clientes (subdirectores, investigadores, analistas, etc.) en su empresa en 2019 de forma permanente, por nómina} \\ \hline
+\end{tabular}
+\end{table}
+
+% p12_2_hombres - p12_4
+
+\begin{table}[]
+\caption{Estructura de las respuestas a la Edición XXII (2019-2020) del Estudio Anual de AMAI (parte 9)}
+\label{tab:raw2019_9}
+\begin{tabular}{|l|l|l|}
+\hline
+Columna &
+  Tipo &
+  Descripción \\ \hline
+p12\_2\_hombres &
+  Numérica &
+  \parbox[t]{8cm}{Porcentaje de personas hombres que colaboraron como personal técnico y de atención a clientes (subdirectores, investigadores, analistas, etc.) en su empresa en 2019 de forma permanente, por nómina} \\ \hline
+p12\_3 &
+  Numérica &
+  \parbox[t]{8cm}{Número de personas que colaboraron como personal de apoyo administrativo (contadores, secretarias, mensajeros, choferes, etc.) en su empresa en 2019 de forma permanente, por nómina} \\ \hline
+p12\_3\_mujeres &
+  Numérica &
+  \parbox[t]{8cm}{Porcentaje de personas mujeres que colaboraron como personal de apoyo administrativo (contadores, secretarias, mensajeros, choferes, etc.)  en su empresa en 2019 de forma permanente, por nómina} \\ \hline
+p12\_3\_hombres &
+  Numérica &
+  \parbox[t]{8cm}{Porcentaje de personas hombres que colaboraron como personal de apoyo administrativo (contadores, secretarias, mensajeros, choferes, etc.) en su empresa en 2019 de forma permanente, por nómina} \\ \hline
+p12\_4 &
+  Numérica &
+  \parbox[t]{8cm}{Número de personas que colaboraron como equipo de producción (entrevistadores, capturistas, codificadores) en su empresa en 2019 de forma permanente, por nómina} \\ \hline
+\end{tabular}
+\end{table}
+
+% p_12_4_mujeres - p13_1_hombres
+
+\begin{table}[]
+\caption{Estructura de las respuestas a la Edición XXII (2019-2020) del Estudio Anual de AMAI (parte 10)}
+\label{tab:raw2019_10}
+\begin{tabular}{|l|l|l|}
+\hline
+Columna &
+  Tipo &
+  Descripción \\ \hline
+
+p12\_4\_mujeres &
+  Numérica &
+  \parbox[t]{8cm}{Porcentaje de personas mujeres que colaboraron como equipo de producción (entrevistadores, capturistas, codificadores)   en su empresa en 2019 de forma permanente, por nómina} \\ \hline
+p12\_4\_hombres &
+  Numérica &
+  \parbox[t]{8cm}{Porcentaje de personas hombres que colaboraron como equipo de producción (entrevistadores, capturistas, codificadores) en su empresa en 2019 de forma permanente, por nómina} \\ \hline
+p12\_total &
+  Numérica &
+  \parbox[t]{8cm}{Número total de personas que colaboraron en su empresa en 2019 de forma permanente, por nómina} \\ \hline
+p13\_1 &
+  Numérica &
+  \parbox[t]{8cm}{Número de personas que colaboraron como socios y altos ejecutivos (directores generales y directores de área) en su empresa en 2019 eventualmente, por proyecto} \\ \hline
+p13\_1\_mujeres &
+  Numérica &
+  \parbox[t]{8cm}{Porcentaje de personas mujeres que colaboraron como socios y altos ejecutivos (directores generales y directores de área) en su empresa en 2019 de forma eventualmente, por proyecto} \\ \hline
+p13\_1\_hombres &
+  Numérica &
+  \parbox[t]{8cm}{Porcentaje de personas hombres que colaboraron como socios y altos ejecutivos (directores generales y directores de área)  en su empresa en 2019 de forma eventualmente, por proyecto} \\ \hline
+\end{tabular}
+\end{table}
+
+% p13_2 - p13_3_mujeres
+
+\begin{table}[]
+\caption{Estructura de las respuestas a la Edición XXII (2019-2020) del Estudio Anual de AMAI (parte 11)}
+\label{tab:raw2019_11}
+\begin{tabular}{|l|l|l|}
+\hline
+Columna &
+  Tipo &
+  Descripción \\ \hline
+p13\_2 &
+  Numérica &
+  \parbox[t]{8cm}{Número de personas que colaboraron como personal técnico y de atención a clientes (subdirectores, investigadores, analistas, etc.) en su empresa en 2019 de forma eventualmente, por proyecto} \\ \hline
+p13\_2\_mujeres &
+  Numérica &
+  \parbox[t]{8cm}{Porcentaje de personas mujeres que colaboraron como personal técnico y de atención a clientes (subdirectores, investigadores, analistas, etc.) en su empresa en 2019 de forma eventualmente, por proyecto} \\ \hline
+p13\_2\_hombres &
+  Numérica &
+  \parbox[t]{8cm}{Porcentaje de personas hombres que colaboraron como personal técnico y de atención a clientes (subdirectores, investigadores, analistas, etc.) en su empresa en 2019 de forma eventualmente, por proyecto} \\ \hline
+p13\_3 &
+  Numérica &
+  \parbox[t]{8cm}{Número de personas que colaboraron como personal de apoyo administrativo (contadores, secretarias, mensajeros, choferes, etc.) en su empresa en 2019 de forma eventualmente, por proyecto} \\ \hline
+p13\_3\_mujeres &
+  Numérica &
+  \parbox[t]{8cm}{Porcentaje de personas mujeres que colaboraron como personal de apoyo administrativo (contadores, secretarias, mensajeros, choferes, etc.)  en su empresa en 2019 de forma eventualmente, por proyecto} \\ \hline
+\end{tabular}
+\end{table}
+
+% p13_3_hombres - p14_a
+
+\begin{table}[]
+\caption{Estructura de las respuestas a la Edición XXII (2019-2020) del Estudio Anual de AMAI (parte 12)}
+\label{tab:raw2019_12}
+\begin{tabular}{|l|l|l|}
+\hline
+Columna &
+  Tipo &
+  Descripción \\ \hline
+p13\_3\_hombres &
+  Numérica &
+  \parbox[t]{8cm}{Porcentaje de personas hombres que colaboraron como personal de apoyo administrativo (contadores, secretarias, mensajeros, choferes, etc.) en su empresa en 2019 de forma eventualmente, por proyecto} \\ \hline
+p13\_4 &
+  Numérica &
+  \parbox[t]{8cm}{Número de personas que colaboraron como equipo de producción (entrevistadores, capturistas, codificadores) en su empresa en 2019 de forma eventualmente, por proyecto} \\ \hline
+p13\_4\_mujeres &
+  Numérica &
+  \parbox[t]{8cm}{Porcentaje de personas mujeres que colaboraron como equipo de producción (entrevistadores, capturistas, codificadores)   en su empresa en 2019 de forma eventualmente, por proyecto} \\ \hline
+p13\_4\_hombres &
+  Numérica &
+  \parbox[t]{8cm}{Porcentaje de personas hombres que colaboraron como equipo de producción (entrevistadores, capturistas, codificadores) en su empresa en 2019 de forma eventualmente, por proyecto} \\ \hline
+p13\_total &
+  Numérica &
+  \parbox[t]{8cm}{Número total de personas que colaboraron en su empresa en 2019 de forma eventualmente, por proyecto} \\ \hline
+p14\_a &
+  Texto &
+  \parbox[t]{8cm}{Cambio a) más importante que vislumbra para la industria de aquí a 5 años.} \\ \hline
+\end{tabular}
+\end{table}
+
+% p13
+
+\begin{table}[]
+\caption{Estructura de las respuestas a la Edición XXII (2019-2020) del Estudio Anual de AMAI (parte 13)}
+\label{tab:raw2019_13}
+\begin{tabular}{|l|l|l|}
+\hline
+Columna &
+  Tipo &
+  Descripción \\ \hline
+p14\_b & Texto & \parbox[t]{8cm}{Cambio b) más importante que vislumbra para la industria de aquí a 5 años} \\ \hline
+p14\_c & Texto & \parbox[t]{8cm}{Cambio c) más importante que vislumbra para la industria de aquí a 5 años} \\ \hline
+p15\_a & Texto & \parbox[t]{8cm}{Reto a) más relevante a confrontar por la industria en los próximo 5 años}  \\ \hline
+p15\_b & Texto & \parbox[t]{8cm}{Reto b) más relevante a confrontar por la industria en los próximo 5 años}  \\ \hline
+p15\_c & Texto & \parbox[t]{8cm}{Reto c) más relevante a confrontar por la industria en los próximo 5 años}  \\ \hline
+p16\_economiaPers & Texto & \parbox[t]{8cm}{Pronóstico tiene se respecto a este año en comparación con el anterior para "Mi economía personal" (igual, mejor, peor)} \\ \hline
+p16\_empresa      & Texto & \parbox[t]{8cm}{Pronóstico tiene se respecto a este año en comparación con el anterior para "Mi empresa" (igual, mejor, peor)}  \\ \hline
+\end{tabular}
+\end{table}
+
+\newpage
+
+\begin{table}[]
+\caption{Estructura de las respuestas a la Edición XXII (2019-2020) del Estudio Anual de AMAI (parte 14)}
+\label{tab:raw2019_14}
+\begin{tabular}{|l|l|l|}
+\hline
+Columna         & Tipo  & Descripción                                                                                           \\ \hline
+p16\_indMex  & Texto & \parbox[t]{8cm}{Pronóstico tiene se respecto a este año en comparación con el anterior para "La industria en México" (igual, mejor, peor)}                  \\ \hline
+p16\_indMund & Texto & \parbox[t]{8cm}{Pronóstico tiene se respecto a este año en comparación con el anterior para "La industria en el mundo" (igual, mejor, peor)}                \\ \hline
+p16\_mexGen     & Texto & \parbox[t]{8cm}{Pronóstico tiene se respecto a este año en comparación con el anterior para "México en general" (igual, mejor, peor)}      \\ \hline
+p17\_a          & Texto & \parbox[t]{8cm}{Temas de innovación en la industria que sugiere deban ser tratados prioritariamente en la agenda de AMAI} \\ \hline
+p17\_b       & Texto & \parbox[t]{8cm}{Temas que sugiere deberían incorporarse a los cursos y sesiones de capacitación de AMAI (por ejemplo, en Campus AMAI)} \\ \hline
+p18\_comentario & Texto & \parbox[t]{8cm}{Comentarios adicionales que se deseen agregar}                                                         \\ \hline
+\end{tabular}
+\end{table}
+
+Por otra parte, las preguntas del cuestionario se asociaron a los diferentes temas de interés para la industria, como se aprecia a través del siguiente cuadro:
+
+\begin{table}[]
+\caption{Estructura temática de las respuestas a la Edición XXII (2019-2020) del Estudio Anual de AMAI}
+\label{tab:topics_raw_entrega2019}
+\begin{tabular}{|l|l|l|}
+\hline
+
+  Tema &
+  Columnas de base de datos \\ \hline
+
+  \parbox[t]{5cm}{Confidencialidad de los datos} &
+  \parbox[t]{7cm}{p1, p2, p3} \\ \hline
+
+  Tipos de investigación realizada &
+  \parbox[t]{6.5cm}{p4\_1, p4\_2, p4\_3, p4\_4, p4\_5} \\ \hline
+
+  Facturación en 2019 &
+  \parbox[t]{6.5cm}{p4\_5, p5, p6\_1, p6\_2, p6\_3, p6\_4, p6\_5, p6\_6, p7\_1\_a, p7\_1\_b, p7\_2\_a, p7\_2\_b, p7\_2\_c, p7\_3\_a, p7\_3\_b, p7\_3\_c, p7\_3\_d, p7\_3\_e, p7\_3\_f, p7\_3\_g, p7\_3\_h, p7\_3\_i, p7\_3\_j} \\ \hline
+
+  Volumen de investigación &
+  \parbox[t]{6cm}{p8\_1, p8\_2, p8\_3, p9, p10\_1, p10\_2, p10\_3, p10\_4, p10\_5, p10\_otro, p11} \\ \hline
+
+  Recursos humanos y técnicos &
+  \parbox[t]{6.5cm}{p12\_1, p12\_1\_mujeres, p12\_1\_hombres, p12\_2, p12\_2\_mujeres, p12\_2\_hombres, p12\_3, p12\_3\_mujeres, p12\_3\_hombres, p12\_4, p12\_4\_mujeres, p12\_4\_hombres, p12\_total, p13\_1, p13\_1\_mujeres, p13\_1\_hombres, p13\_2, p13\_2\_mujeres, p13\_2\_hombres, p13\_3, p13\_3\_mujeres, p13\_3\_hombres, p13\_4, p13\_4\_mujeres, p13\_4\_hombres, p13\_total} \\ \hline
+
+  \parbox[t]{4cm}{Expectativas y prospectiva sobre la industria} &
+  \parbox[t]{6.5cm}{p14\_a, p14\_b, p14\_c, p15\_a, p15\_b, p15\_c, p16\_economiaPers, p16\_empresa, p16\_indMex, p16\_indMund, p16\_mexGen, p17\_a, p17\_b} \\ \hline
+
+  Comentarios adicionales &
+  p18 \\ \hline
+\end{tabular}
+\end{table}

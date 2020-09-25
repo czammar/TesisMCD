@@ -1,0 +1,401 @@
+%----------------------------------------------------------------------------------------
+%	PREÁMBULO
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt, oneside]{book}
+\usepackage[paperwidth=17cm, paperheight=22.5cm, bottom=2.5cm, right=2.5cm]{geometry}
+
+% El borde inferior puede parecerles muy amplio a la vista. Les recomiendo hacer una prueba de impresión antes para ajustarlo
+
+\usepackage{amssymb,amsmath,amsthm} % Símbolos matemáticos
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc} % Acentos y otros símbolos 
+\usepackage{enumerate}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref} % Hipervínculos en el índice
+\usepackage{graphicx}
+\usepackage{ragged2e} % Justificando texto
+\usepackage{lscape} % rota tablas
+
+%\usepackage{subfig} % Subfiguras
+\graphicspath{{Imagenes/}} % En qué carpeta están las imágenes
+
+% Para eliminar guiones y justificar texto
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+\linespread{1.25} % Asemeja el interlineado 1.5 de Word
+
+\let\oldfootnote\footnote % Deja espacio entre el número del pie de página y el inicio del texto
+\renewcommand\footnote[1]{%
+\oldfootnote{\hspace{0.05mm}#1}}
+
+\renewcommand{\thefootnote} {\textcolor{Black}{\arabic{footnote}}} % Súperindice a color negro
+
+\setlength{\footnotesep}{0.75\baselineskip} % Espaciado entre notas al pie
+
+\usepackage{fnpos} % Footnotes al final de pág.
+
+\usepackage[justification=centering, font=bf, labelsep=period, skip=5pt]{caption} % Centrar captions de tablas y ponerlas en negritas
+
+\newcommand{\imagesource}[1]{{\footnotesize Fuente: #1}}
+
+\usepackage{tabularx} % Big tables
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{longtable}
+
+\usepackage{float} % Float tables
+
+\usepackage[usenames,dvipsnames]{xcolor} % Color
+
+\usepackage{pgfplots} % Gráficas
+\pgfplotsset{compat=newest}
+\pgfplotsset{width=7.5cm}
+\pgfkeys{/pgf/number format/1000 sep={}}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	PORTADA
+%----------------------------------------------------------------------------------------
+
+\title{EDICIÓN XXII (2019-2020) DEL ESTUDIO ANUAL DE LA INDUSTRIA DE INVESTIGACIÓN DE MERCADOS Y OPINIÓN PÚBLICA EN MÉXICO} % Con este nombre se guardará el proyecto en writeLaTex
+
+\begin{titlepage}
+\begin{center}
+
+\textbf{\normalsize INSTITUTO TECNOLÓGICO AUTÓNOMO DE MÉXICO}\\[2em]
+
+%Figura
+
+\vspace{0.5cm}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=10cm,height=3cm]{itam_logo.png}
+\end{center}
+\end{figure}
+
+\vspace{0.5cm}
+
+% Pueden modificar el tamaño del logo cambiando la escala
+
+\justifying \noindent \textbf{\large EDICIÓN XXII (2019-2020) DEL ESTUDIO ANUAL DE LA INDUSTRIA DE INVESTIGACIÓN DE MERCADOS Y OPINIÓN PÚBLICA EN MÉXICO}\\[1em]
+
+\centering \textbf{\large C A S O}\\[1em]
+
+\centering  \textbf{\large  QUE PARA OBTENER EL GRADO DE}\\[1em]
+
+\centering \textbf{\large MAESTRO EN CIENCIA DE DATOS}\\[1em]
+
+\centering \textbf{\large PRESENTA}\\[1em]
+
+
+\centering \textbf{\large CÉSAR ZAMORA MARTÍNEZ}\\[2em]
+
+% Asegúrense de escribir el nombre completo de su asesor
+\vspace{1cm}
+\centering \textbf{\large ASESORA: MSC. LILIANA MILLÁN NÚÑEZ}\\[1em]
+
+\end{center}
+
+\vspace*{\fill}
+\textbf{CIUDAD DE MÉXICO \hspace*{\fill} 2020}
+
+\end{titlepage}
+
+%----------------------------------------------------------------------------------------
+%	DECLARACIÓN
+%----------------------------------------------------------------------------------------
+
+\thispagestyle{empty}
+
+\vspace*{\fill}
+\begingroup
+
+\noindent
+«Con fundamento en los artículos 21 y 27 de la Ley Federal del Derecho de Autor y como titular de los derechos moral y patrimonial de la obra titulada ``\textbf{Edición XXII (2019-2020) del Estudio Anual de la Industria de Investigación de Mercados y Opinión Pública en México}'', otorgo de manera gratuita y permanente al Instituto Tecnológico Autónomo de México y a la Biblioteca Raúl Bailléres Jr., la autorización para que fijen la obra en cualquier medio, incluido el electrónico, y la divulguen entre sus usuarios, profesores, estudiantes o terceras personas, sin que pueda percibir por tal divulgación una contraprestación.»
+
+% Asegúrense de cambiar el título de su tesis en el párrafo anterior
+
+\centering 
+
+\vspace{5em}
+
+\rule[1em]{20em}{0.5pt} % Línea para la fecha
+
+\textsc{César Zamora Martínez}
+ 
+\vspace{8em}
+
+\rule[1em]{20em}{0.5pt} % Línea para la firma
+
+\textsc{Fecha}
+
+\endgroup
+\vspace*{\fill}
+
+%----------------------------------------------------------------------------------------
+%	DEDICATORIA
+%----------------------------------------------------------------------------------------
+
+\pagestyle{plain}
+\frontmatter
+
+\chapter*{}
+
+\begin{flushright}
+\textit{A mis padres,\\ quienes tras siete años \\ siguen luchando incansablemente.}
+\end{flushright}
+
+\vspace{0.5cm}
+
+\begin{flushright}
+\textit{A la pequeña Elvira, \\ a quien nunca he olvidado. \\ Descansa en paz.}
+\end{flushright}
+
+
+%----------------------------------------------------------------------------------------
+%	CITA LITERARIA
+%----------------------------------------------------------------------------------------
+
+\pagestyle{plain}
+
+\chapter*{}
+
+\begin{flushright}
+\textit{To make a prairie it takes a clover and one bee, \\ 
+One clover, and a bee. \\ 
+And revery. \\ 
+The revery alone will do, \\ 
+If bees are few.}
+\end{flushright}
+
+\vspace{0.5 cm}
+
+\begin{flushright}
+\textit{To make a prairie \\ Emily Dickinson.}
+\end{flushright}
+
+%----------------------------------------------------------------------------------------
+%	AGRADECIMIENTOS
+%----------------------------------------------------------------------------------------
+
+\chapter*{Agradecimientos}
+
+\noindent  A mis padres, por el inmenso amor que me han entregado. Por que han sido mi fuerza y apoyo durante toda la vida, porque siempre han creído en mi y ya que este trabajo no habría sido posible sin ellos; por todos los esfuerzos que han enfrentado valientemente para salir adelante y porque todo lo que soy se los debo a ustedes.
+
+\vspace{0.5cm}
+
+A Alinne Fuentes y César Martínez, por su invaluable amistad y sobre todo por ser los primeros en creer que todo esto sería posible.
+
+\vspace{0.5cm}
+
+A Liliana Millán, Concepción Ruiz y Adolfo de Unanúe, por darme la oportunidad de formar parte del Centro de Ciencia de Datos del Instituto Tecnológico Autónomo de México, por sus enseñanzas a través de los proyectos, pero sobre todo por su generosidad y calidad humana.
+
+\vspace{0.5cm}
+
+Al Instituto Tecnológico Autónomo de México, por apoyar financieramente mis estudios de posgrado.
+
+% Esta sección es lo único que la gente lee. True story :)
+
+%----------------------------------------------------------------------------------------
+%	RESUMEN
+%----------------------------------------------------------------------------------------
+
+\chapter*{Resumen}
+
+\noindent La Asociación Mexicana de Agencias de Inteligencia de Mercado y Opinión A.C. (AMAI) realiza periódicamente el \emph{Estudio Anual de la Industria de Investigación de Mercados y Opinión Pública en México} (Estudio Anual de AMAI), dirigido a organizaciones de dicho sector que realizan sus actividades en México, con el propósito  de analizar la situación que  prevalece  en  el  mercado  mexicano  de  investigación  e  inteligencia aplicada a mercados, medios y publicidad.
+
+Este documento presenta los principios metodológicos considerados, como asistente de investigación del Centro de Ciencia de Datos ITAM, para efectuar el correspondiente procesamiento y análisis de la información recibida en la \emph{Edición XXII (2019-2020)} del Estudio Anual de AMAI, abordando este problema desde la perspectiva de ciencia de datos, mediante el diseño de un producto de datos que permita inferir elementos clave para esta industria de manera automatizada, los cuales se comunicarán a los diferentes actores a través de reportes ejecutivos.
+
+\pagestyle{plain}
+
+\noindent 
+
+%----------------------------------------------------------------------------------------
+%	Summary
+%----------------------------------------------------------------------------------------
+
+\chapter*{Summary}
+
+\noindent Mexican Association of Market Intelligence and Opinion Agencies A.C. (AMAI) periodically carries out the \emph{Annual Study of the Market Research and Public Opinion Industry in Mexico} (Annual Study of AMAI), aimed at organizations in this sector that carry out their activities in Mexico, with the purpose of analyzing situation that prevails in mexican market for research and intelligence applied to markets, media and advertising.
+
+Following document presents framework and methodological principles considered as a research assistant of the ITAM Data Science Center to carry out the corresponding processing and analysis of the information received in the \emph{Edition XXII (2019-2020)} of the Annual Study of AMAI, by addressing this problem from a data science perspective, through design of a data product that allows to infer key elements for this industry in an automated way, which will be communicated to the different actors through executive reports.
+\pagestyle{plain}
+
+\noindent 
+
+%----------------------------------------------------------------------------------------
+%	TABLA DE CONTENIDOS
+%---------------------------------------------------------------------------------------
+
+\tableofcontents
+
+%----------------------------------------------------------------------------------------
+%	ÍNDICE DE CUADROS Y FIGURAS
+%---------------------------------------------------------------------------------------
+
+\listoftables
+
+\listoffigures
+
+%----------------------------------------------------------------------------------------
+%	TESIS
+%----------------------------------------------------------------------------------------
+
+\mainmatter % Empieza la numeración de las páginas
+
+\pagestyle{plain}
+
+% Incluye los capítulos en el fólder de capítulos
+
+\include{Chapters/0.Intro}
+
+\include{Chapters/1.Rev}
+
+\include{Chapters/2.Esp}
+
+\include{Chapters/3.Mod}
+
+\include{Chapters/4.Mex}
+
+\include{Chapters/5.Conc}
+
+
+%----------------------------------------------------------------------------------------
+%	APÉNDICES
+%----------------------------------------------------------------------------------------
+
+\begin{appendix}
+
+\include{Apendices/ApA}
+
+\end{appendix}
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAFÍA
+%----------------------------------------------------------------------------------------
+
+
+\chapter*{Referencias}
+\addcontentsline{toc}{chapter}{Referencias}
+
+% Macro. Esto es muy importante, no lo borren
+
+\makeatletter
+\renewenvironment{thebibliography}[1]
+     {\@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}%
+      \list{}%
+           {\setlength{\labelwidth}{0pt}%
+            \setlength{\labelsep}{0pt}%
+            \setlength{\leftmargin}{\parindent}%
+            \setlength{\itemindent}{-\parindent}%
+            \@openbib@code
+            \usecounter{enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
+\makeatother
+
+\begin{thebibliography}{111}
+
+% Lista
+
+% La manera recomendada para citar papers o libros en el formato de Chicago esta en el siguiente vínculo: https://www.chicagomanualofstyle.org/tools_citationguide/citation-guide-2.html
+
+% Es importante poner el apellido del autor seguido del año de publicación, una coma y las páginas consultadas en el texto antes de puntuar y entre paréntesis para las citas en el cuerpo de la tesis
+
+% Ejemplo:
+
+% Las \textit{causas próximas} del crecimiento son conocidas: tecnología, capital humano y físico. La pregunta es ¿por qué unos países sí tienen estas causas próximas y otros no? La respuesta son las \textit{causas fundamentales:} suerte, geografía, cultura e instituciones (Acemoglu 2009, 110).
+
+%AAAAA
+
+\bibitem{CensoXX} Asociación Mexicana de Agencias de Inteligencia de Mercado y Opinión A.C. 2018. \emph{Estudio Anual de la Industria de Investigación de Mercados y Opinión Pública en México. Edición XX (2017-2018)}. \url{http://www.amai.org/revista_amai/Mayo_2018/AMAI_4_P14-17.pdf}.
+
+\bibitem{CensoXXI} Asociación Mexicana de Agencias de Inteligencia de Mercado y Opinión A.C. 2019. \emph{Estudio Anual de la Industria de Investigación de Mercados y Opinión Pública en México. Edición XXI (2018-2019)}. \url{https://www.amai.org/descargas/Estudio_Anual_AMAI_XXI_Edicion_2018_Comunicado_Abril_2019.pdf}.
+
+\bibitem{CensoXXII} Asociación Mexicana de Agencias de Inteligencia de Mercado y Opinión A.C. 2020. \emph{Estudio Anual de la Industria de Investigación de Mercados y Opinión Pública en México. Edición XXII (2019-2020)}. \url{https://www.amai.org/descargas/Estudio_Anual_AMAI_XXII_Edicion_2019_Comunicado_Medios_Junio_2020.pdf}.
+
+\bibitem{CensoXXIIMetodologia} Asociación Mexicana de Agencias de Inteligencia de Mercado y Opinión A.C. 2020. \emph{Estudio Anual de la Industria de Investigación de Mercados y Opinión Pública en México. Nota metodológica de la Edición XXII (2019-2020)}. \url{http://amai.org/descargas/reporteMetodologicoCliente270520.pdf}.
+
+%BBBBB
+
+%CCCCC
+
+%DDDDD
+
+%EEEEE
+
+%FFFFF
+
+%GGGGG
+
+%HHHHH
+
+%IIIII
+
+%JJJJJ
+
+%KKKKK
+
+%LLLLL
+
+%MMMMM
+
+%NNNNN
+
+%OOOOO
+
+%PPPPP
+
+%QQQQQ
+
+%RRRRR
+
+%SSSSS
+
+%TTTTT
+
+%UUUUU
+
+%VVVVV
+
+%WWWWW
+
+%XXXXX
+
+%YYYYY
+
+%ZZZZZ
+
+\end{thebibliography}
+
+%\newpage
+%\thispagestyle{empty}
+%\begin{table}[p]
+%\centering
+%\small
+%\label{ed}
+%\begin{tabular}{c}
+%\textit{Edición XXII (2019-202)}\\ \textit{del Estudio Anual de la Industria}\\ \textit{de Investigación de Mercados }\\ \textit{y Opinión Pública en México,}\\ escrito por César Zamora,\\ se terminó de imprimir en [WIP: Definir mes] de 2020\\ en los talleres de Tesis Matozo.\\ Campeche 156, colonia Roma,\\ Ciudad de México.
+%\end{tabular}
+%\end{table}
+
+% Si lo prefieren, avisen a su taller que esta página ya la incluyeron ustedes para que no les impriman las que ellos usan. Lo recomiendo ampliamente
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

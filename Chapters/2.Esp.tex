@@ -1,0 +1,74 @@
+\chapter{Problema desde la óptica de ciencia de datos}
+
+\noindent Una vez que se ha establecido el contexto de la organización y los objetivos de negocio a alcanzarse a partir de la Edición  XXII  (2019-2020)  del Estudio Anual de AMAI, este capítulo tiene el propósito de plantear dichos elementos como problemas a resolverse desde la óptica de ciencia de datos, considerando la inclusión de un \emph{baseline} y métricas de comparación.
+
+\section{Planteamiento del problema} \label{obj:datascience}
+
+Para facilitar el planteamiento de los objetivos de negocio, descritos en la sección \ref{obj:bussiness}, como problemas desde la perspectiva de ciencia a continuación se discutirá cada uno tales objetivos, planteando las consideraciones particulares de cada caso.
+
+\subsection{Generales}\label{problema:generales}
+
+\begin{itemize}
+\item \textit{Cantidad de empresas participantes:} problema de conteos a partir de registros que identifiquen a las empresas (texto) en la base de datos del estudio, considerando registros únicos.
+\item \textit{Número de empresas participantes comparables 2018-2019:} problema de conteos a partir de registros que identifiquen a las empresas para las empresas bases de datos del estudio de 2018 y 2019. Además de tener que identificarse una columna para unir las tablas (únicamente considerando las columnas con texto, puesto que no existen llaves en variables de otro tipo), se necesita tomar en cuenta que una misma empresa puede haber registrado nombre ligeramente distinto en ambos periodos de tiempo. 
+\end{itemize}
+
+\subsection{Tamaño del mercado:}
+\begin{itemize}
+\item \textit{Dimensionamiento del mercado con base en la facturación de las empresas que conforman el sector:} problema de estimar la facturación en pesos mexicanos de todos los actores del mercado en 2019; considerando que hay 3 tipos de fuentes: i) Datos proporcionados por participantes del Estudio Anual de AMAI, ii) Datos no proporcionados por participantes, pero sobre los que se tienen indicios confiables (por ejemplo, valores históricos) y iii) resto no conocido por la industria.
+\end{itemize}
+
+\subsection{Cambios para empresas coincidentes en 2018-2019 sobre:}
+\begin{itemize}
+\item \textit{Número de empresas que reportaron datos para Ediciones XXI (2018-2019) y XXII (2019-2020) del Estudio Anual de AMAI}: problema de identificación y conteo de empresas cuyos datos se encuentran en bases de datos de periodos 2018 y 2019; esencialmente se tienen las mismas consideraciones que para los rubros de la sección \ref{problema:generales}.
+\item \textit{Niveles de facturación para 2018 y 2018:} problema de identificación y comparación de empresas cuyos datos se encuentran en bases de datos de periodos 2018 y 2019; análogamente se tienen las mismas consideraciones que para los rubros de la sección \ref{problema:generales}.
+\end{itemize}
+
+\subsection{Valor del tamaño del mercado en el tiempo:}
+\begin{itemize}
+\item \textit{Valor del mercado de toda la industria en términos reales y nominales:} problema de comparación de valor del mercado en estudios previos con valores estimados al resolver \ref{problema:generales}, con lo cual esencialmente se tienen las mismas consideraciones que para los rubros de la sección
+\item \textit{Cambios del mercado de toda la industria y de empresas coincidentes en 2018-2019:} problema análogo de comparación de valor del mercado en estudios previos con valores estimados al resolver \ref{problema:generales}, pero en el universo de empresas presentes en ambos estudios, por lo que se tienen consideraciones análogas que para los rubros de tal sección,
+\item \textit{Valores del mercado de toda la industria en dólares:} problema de comparación de valor del mercado en estudios previos con valores estimados al resolver \ref{problema:generales}; se debe emplear una fuente confiable para tipo cambio peso mexicano a dolar americano.
+\end{itemize}
+
+\subsection{Volumen de producción:}
+\begin{itemize}
+\item \textit{Cantidad total de proyectos realizados en el periodo de interés:} problema relativo a integrar los proyectos reportados por todos los participantes en el estudio,
+\item \textit{Cantidad total de unidades relativas a sesiones de grupo presenciales o remotas, entrevistas a profundidad y etnografías o aplicaciones de antropología:}, problema de integrar los proyectos reportados por todos los participantes en el estudio según su tipo,
+\item \textit{Cantidad total de entrevistas realizadas según su tipo:} problema de integrar los proyectos reportados por todos los participantes en el estudio, de acuerdo a su tipo correspondiente.
+\end{itemize}
+
+\subsection{Capital humano:}
+\begin{itemize}
+\item \textit{Cantidad de recursos humanos reportados por los participantes del estudio en los diversos segmentos que integran una empresa del sector}, problema de integrar la cantidad de personal por cada segmento, según los datos reportados por las empresas,
+\item \textit{Distribución del capital humano en los segmentos que integran una empresa sector, descritos en el punto anterior, incluyendo el desglose por género:} problema de estimar la distribución personal por cada segmento de la empresa, además de desagregar los valores estimados por género según porcentajes reportado por cada empresa,
+\end{itemize}
+
+\subsection{Ranking de empresas:}
+\begin{itemize}
+\item \textit{Ranking de empresas participantes según su nivel de facturación en 2019}: problema de ordenamiento de empresas a través de nivel de facturación en el periodo de interés; se debe identificar  a aquellas que otorgaron su consentimiento explícito de formar parte de éste y excluir a las quienes no aceptaron para no romper acuerdos de confidencialidad.
+\end{itemize}
+
+\subsection{Ante la incertidumbre futura:}
+\begin{itemize}
+\item \textit{Identificar temas relevantes sobre retos y cambios más importantes que la industria identifica en un horizonte de 5 años a futuro:} problema de procesamiento de respuestas en texto para inferir temas relevantes sobre retos y cambios para la industria,
+\end{itemize}
+
+\subsection{Perspectivas 2020}
+\begin{itemize}
+\item \textit{Identificar perspectivas sobre diferentes temas económicos:} problema de procesamiento de respuestas en texto para identificación de perspectivas de la industria.
+\end{itemize}
+
+\section{Descripción del Baseline} \label{baseline}
+
+Para establecer un \emph{baseline} de utilidad para los objetivos de negocio, descritos en las secciones \ref{obj:bussiness} y \ref{obj:datascience}, se recurrió a comparar directamente con los resultados obtenidos en ediciones previas del Estudio Anual de AMAI, particularmente contrastándolos con la Edición XXI (2018-2019)\footnote{Véase \url{https://www.amai.org/descargas/Estudio_Anual_AMAI_XXI_Edicion_2018_Comunicado_Abril_2019.pdf}}, de manera que se pudiera asegurar la razonabilidad de las estimaciones realizadas y consultar con AMAI los posibles hallazgos atípicos.
+
+\section{Métricas a usar}
+
+Para los efectos de las comparaciones descritos en la sección previa, en el caso de tratarse de respuestas cuantitativas se realizaron validaciones en términos numéricos como porcentuales.
+
+En el caso de los objetivos de negocio relativos a análisis de texto, se recurrieron a comparaciones cualitativas de los hallazgos relativos a estudios previos, puesto que en ediciones anteriores no se siguió ninguna metodología concreta, sino que se procedía a reunir los comentarios y escoger algunos temas como relevantes bajo consideraciones de conocimiento del mercado.
+
+
+
+

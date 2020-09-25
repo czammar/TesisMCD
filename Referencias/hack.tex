@@ -1,0 +1,35 @@
+% No borren este código. Es importante para que las referencias se vean como se debe
+
+\documentclass{article}
+
+\makeatletter
+\renewenvironment{thebibliography}[1]
+     {\section*{\refname}%
+      \@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}%
+      \list{}%
+           {\setlength{\labelwidth}{0pt}%
+            \setlength{\labelsep}{0pt}%
+            \setlength{\leftmargin}{\parindent}%
+            \setlength{\itemindent}{-\parindent}%
+            \@openbib@code
+            \usecounter{enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
+\makeatother
+
+\begin{document}
+
+\begin{thebibliography}{111}
+\raggedright
+
+\bibitem{CensoXXI} Asociación Mexicana de Agencias de Inteligencia de Mercado y Opinión A.C. 2019. \emph{Estudio Anual de la Industria de Investigación de Mercados y Opinión Pública en México. Edición XXI (2018-2019)}. Véase \url{https://www.amai.org/descargas/Estudio_Anual_AMAI_XXI_Edicion_2018_Comunicado_Abril_2019.pdf}.
+
+\end{thebibliography}
+
+\end{document}
