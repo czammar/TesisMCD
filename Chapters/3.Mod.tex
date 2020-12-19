@@ -15,9 +15,9 @@ A continuación se ofrece una descripción detallada del proceso que se ha dise�
 Como se ha mencionado, el Centro de Ciencia de Datos ITAM recibió la información histórica de los estudios realizados previamente, incluyendo las respuestas de las empresas informantes, así como los  correspondientes reportes anuales en formato de hojas de cálculo en MS Excel, cuyo contenido principalmente es relativo a respuestas en valores numéricos, porcentajes y texto libre. Bajo la consideración de que tal información se ha reunido hasta la fecha más reciente el pipeline de este proyecto se puede describir como sigue: 
 
 \begin{itemize}
-     \item \textit{Raw Schema:} Carga de la información contenida en las hojas de cálculo se cargó hacia esquemas crudo de PostgreSQL, sin realizar modificaciones de ningún tipo.
+     \item \textit{Raw Schema:} Carga de la información contenida en las hojas de cálculo hacia esquemas crudo de PostgreSQL, sin realizar modificaciones de ningún tipo.
     
-    \item \textit{Clean Schema:} corresponde a una serie de acciones de limpieza de las fuentes de datos, entre las que destacaron 1) cambiar el texto a minúsculas, 2) eliminar acentos, guiones, espacios,  y 3) corregir lectura de caracteres raros debidos a codificaciones no identificadas. A su vez, cabe destacar que, ante la ausencia de llaves, en este punto se procede a identificar al nombre de las empresas como columna común a las bases de datos de las diferentes ediciones del Estudio Anual de la AMAI para poder cruzar información de diferentes periodos\footnote{Dicho punto fue especialmente problemático dado que ante la ausencia de mecanismos de control el llenado de información de los participantes, una misma empresa podía presentase con nombres ligeramente distintos en periodos diferentes lo que complica su identificación desde el texto (por ejemplo, con abreviaciones, denominaciones comerciales o legales), para lo cual se procedió a homologan los nombres correspondientes.}.
+    \item \textit{Clean Schema:} corresponde a una serie de acciones de limpieza de las fuentes de datos, entre las que destacaron 1) cambiar el texto a minúsculas, 2) eliminar acentos, guiones, espacios,  y 3) corregir lectura de caracteres raros debidos a codificaciones no identificadas. A su vez, cabe destacar que, ante la ausencia de llaves, en este punto se procede a identificar al nombre de las empresas como columna común a las bases de datos de las diferentes ediciones del Estudio Anual de la AMAI para poder cruzar información de diferentes periodos\footnote{Dicho punto fue especialmente problemático dado que ante la ausencia de mecanismos de control el llenado de información de los participantes, una misma empresa podía presentase con nombres ligeramente distintos en periodos diferentes lo que complica su identificación desde el texto (por ejemplo, con abreviaciones, denominaciones comerciales o legales), para lo cual se procedió a homologar los nombres correspondientes.}.
     
     \item \textit{Bussiness Calculations:} Corresponde a la ejecución de cálculos o procesamientos de las fuentes de datos limpias para dar respuestas a los objetivos descritos en las secciones \ref{obj:bussiness} y \ref{obj:datascience}, a través de scripts del lenguaje SQL, los cuales son importados hacia R para alimentar los correspondientes reportes ejecutivos hacia la AMAI (es decir, la versión dirigida al público y la versión confidencial para a participantes de la Edición XXII del Estudio Anual de la AMAI)\footnote{Cabe destacar que en el caso de conteos o cálculo de distribuciones porcentuales con respecto a alguna variable, a menos que se indique lo contrario, se contabilizan únicamente respuestas explícitas, es decir, no se llevaron a cabo imputaciones de datos ante la ausencia de respuesta de un participante.}. 
 \end{itemize}
@@ -43,7 +43,7 @@ Teniendo presente la importancia para la industria de la información recabada e
 
 \section{Descripción técnica de producto de datos}
 
-La presente sección brinda la descripción a nivel técnico del producto de datos considera el procesamiento de la información, las consideraciones metodológicas y la solución tecnológica establecida para su desarrollo.
+La presente sección brinda la descripción a nivel técnico del producto de datos: el procesamiento de la información, las consideraciones metodológicas y la solución tecnológica establecida para su desarrollo.
 
 \subsection{Consideraciones metodológicas}
 
@@ -77,15 +77,15 @@ conceptos:\vspace{0.5cm}
 
 Posteriormente, se hizo una análisis de la información histórica reunida por la AMAI de tales empresas, para identificar los valores de facturación más recientes de los que tuviera noticia para tales empresas, encontrándose que para la mayoría de empresas bajo los supuestos 1) y 2), existen registros de su facturación total en la edición 2018. Sin embargo, para dos empresas los datos encontrados se ubican en periodos más lejanos.
 
-En consideración de ello, para el caso de las empresas donde existe información de su facturación en 2018, el nivel correspondiente al 2019 se estimó aplicando al valor 2018 una tasa ponderada de cambio en el facturación total de ambos periodos, cuyo cálculo se realizó con base en la mediana, en términos porcentuales, de la variación observada sobre la facturación de las empresas para los que si se encontraron datos en 2018 y 2019 (es decir, empresas coincidentes 2018-2019). Esta tasa fue cuantificada en $-3.6\%$.
+En consideración de ello, para el caso de las empresas donde existe información de su facturación en 2018, el total correspondiente al 2019 se estimó aplicando al valor 2018 una tasa ponderada de cambio en la facturación total de ambos periodos, cuyo cálculo se realizó con base en la mediana, en términos porcentuales, de la variación observada sobre la facturación de las empresas para las que si se encontraron datos en 2018 y 2019 (es decir, empresas coincidentes 2018-2019). Esta tasa fue cuantificada en $-3.6\%$.
 
-Se consideró pertinente emplear dicha tasa dada la dinámica observada en el nivel facturación de las empresas coincidentes de 2018 y 2019, la cual se ejemplifica en la figura 3.1, donde se han modificado los nombres de las empresas para respetar los acuerdos de confidencialidad existentes entre la AMAI y el CCD del ITAM.
+Se consideró pertinente emplear dicha tasa dada la dinámica observada en el total de facturación de las empresas coincidentes de 2018 y 2019, la cual se ejemplifica en la figura 3.1, donde se han modificado los nombres de las empresas para respetar los acuerdos de confidencialidad existentes entre la AMAI y el CCD del ITAM.
 
 \begin{figure}[h]
 \begin{center}
 \includegraphics[scale=0.4]{Imagenes/empresas_coincidentes.png}
 \end{center}
-\caption{Comparación de niveles de facturación de empresas coincidentes 2018-2019 en ambos periodos}
+\caption{Comparación de los totales de la facturación de empresas coincidentes 2018-2019 en ambos periodos}
 \end{figure}
 
 \newpage
@@ -94,16 +94,16 @@ Por otra parte, se hicieron consideraciones particulares sobre dos empresas:
 
 \begin{itemize}
 \item En el primer caso se identificó que el último dato de facturación existente se remonta a 2015. Sin embargo, éste valor es menor, en tres órdenes de magnitud, al resto de información histórica de dicha empresa. Ante la evidencia, se consideró que probablemente fue un error de llenado en los datos de facturación para esta empresa, por lo que para 2015 dicho valor se  ajustó multiplicándolo con un factor de 1,000. Adicionalmente, para poder estimar su facturación correspondiente a 2019, sobre el dato de 2015 se aplicaron, de manera consistente con la metodología de la AMAI en el estudio 2018, una serie de tasas de crecimiento anual de dicha empresa que fueron reportadas verbalmente a la AMAI (9\% a 2016, 8\% a 2017 y 6\% a 2019), así como el valor estimado de crecimiento de facturación de las empresas en el estudio previo (4.7\% a 2018).
-\item Para el segundo caso, se identificó que el último valor de facturación reportado corresponde a 2017. En este caso, el valor correspondiente a 2019 se estimó aplicando una tasa ponderada de cambio en el facturación total, empleando la mediana de la variación observada sobre la facturación de las empresas para los que si se encontraron datos en dichos periodos de a) 2017 a 2018 (2\%), y b) 2018 a 2019 (-3.6\%).
+\item Para el segundo caso, se identificó que el último valor de facturación reportado corresponde a 2017. En este caso, el valor correspondiente a 2019 se estimó aplicando una tasa ponderada de cambio en el facturación total, empleando la mediana de la variación observada sobre la facturación de las empresas para los que sí se encontraron datos en dichos periodos de a) 2017 a 2018 (2\%), y b) 2018 a 2019 (-3.6\%).
 \end{itemize}
 
 \noindent \emph{Metodología para el valor de mercado supuesto}
 
-\noindent Se empleó el mismo procedimiento seguido por la AMAI en la edición previa del estudio, relativa considerar que la suma  del valor \emph{calculado} y \emph{estimado} equivale al 80\% del mercado total y que, por ende, el mercado \emph{supuesto} se puede obtener como el complemento, es decir, corresponde a 20\% de la facturación de mercado total.
+\noindent Se empleó el mismo procedimiento seguido por la AMAI en la edición previa del estudio, relativa a considerar que la suma  del valor \emph{calculado} y \emph{estimado} equivale al 80\% del mercado total y que, por ende, el mercado \emph{supuesto} se puede obtener como el complemento, es decir, corresponde a 20\% de la facturación de mercado total.
 
 \subsubsection{Mismas empresas reportando}
 
-Dado que sobre este punto, el interés es comparar los cambios en los niveles de facturación para 2018 y 2019, aquí se tomó como referencia a las empresas que reportaron información de facturación en el periodo 2019 del estudio y en el previo.
+Dado que sobre este punto, el interés es comparar los cambios en los totales de facturación para 2018 y 2019, aquí se tomó como referencia a las empresas que reportaron información de facturación en el periodo 2019 del estudio y en el previo.
 
 A continuación se describe la metodología seguida para realizar comparativos de interés al respecto.\\
 
@@ -158,7 +158,7 @@ Valor nominal del mercado:
 \item Para 2019, se usó la estimación del valor del mercado total, calculada por el CCD del ITAM para 2019 con la metodología descrita en el apartado \textbf{Tamaño del mercado} de la presente sección.
 \end{itemize}
 
-\noindent Tipo de cambio dolar americano a pesos mexicanos:
+\noindent \emph{Tipo de cambio de dólar americano a pesos mexicanos:}
 
 \begin{itemize}
 \item Hasta el año 2018, se emplearon datos reportados de tipo de cambio reportados por el Banco Mundial\footnote{Véase \url{https://datos.bancomundial.org/indicador/PA.NUS.FCRF?locations=MX}}
@@ -175,7 +175,7 @@ Para este punto, se contabilizó el total cantidad de unidades reportadas por lo
 
 En torno a las sesiones de grupo presenciales o remotas, de la revisión a las respuestas se identificó que un participante reportó haber llevado a cabo cerca de 479,000 sesiones. Al contrastarlo, se encontró que i) considerando las sesiones de grupo reportadas por las empresas en su conjunto, dicha cantidad equivaldría al 98\% de las mismas, mientras que ii) 75\% de las empresas en el estudio tiene a lo más 200 sesiones de grupo.
 
-Es así que ante la posibilidad de que el valor aludido fuera un error de captura se excluyó la respuesta del participante en comento para consolidar el conteo de sesiones de grupo presenciales o remotas.\\
+Es así que ante la posibilidad de que el valor aludido fuera un error de captura, se excluyó la respuesta de tal participante para consolidar el conteo de sesiones de grupo presenciales o remotas.\\
 
 \noindent \emph{Tipo de entrevistas}
 
@@ -199,7 +199,7 @@ En este sentido, el Clasificación se formó considerando las posiciones de las 
 
 \begin{itemize}
 \item Con respecto a este punto, se realizó un análisis de texto que permitió identificar los temas que fueron mayormente abordados en las respuestas de los participantes del estudio 2019, como retos, cambios y temas de innovación para la industria.
-\item Como resultado, se reportaron 1) los 10 términos más frecuentes, 2) un resumen ejecutivo de los comentarios vertidos por los participantes en torno a los términos más frecuentes, y 3) una nube de palabras para facilitar la exposición del vocabulario empleado por los mismos, donde el tamaño y color de los términos fue proporcional a su frecuencia\footnote{Para este punto, se eliminaron \emph{stopwords} y caracteres de puntuación, considerándose en el ejercicio unigramas y bigramas, empleando las librerias SnowballC, Wordcloud y RColorBrewer de R}.
+\item Como resultado, se reportaron 1) los 10 términos más frecuentes, 2) un resúmen ejecutivo de los comentarios vertidos por los participantes en torno a los términos más frecuentes, y 3) una nube de palabras para facilitar la exposición del vocabulario empleado por los mismos, donde el tamaño y color de los términos fue proporcional a su frecuencia\footnote{Para este punto, se eliminaron \emph{stopwords} y caracteres de puntuación, considerándose en el ejercicio unigramas y bigramas, empleando las librerías SnowballC, Wordcloud y RColorBrewer de R}.
 \end{itemize}
 
 \subsubsection{Perspectivas 2020}
